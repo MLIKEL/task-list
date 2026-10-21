@@ -1,6 +1,6 @@
 {
   "name": "task-list-desktop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "任务清单 Windows 桌面版",
   "scripts": {
