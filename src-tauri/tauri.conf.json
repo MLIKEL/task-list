@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "任务清单",
+  "version": "1.0.0",
+  "identifier": "com.m9498.tasklist",
+  "build": {
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [{
+      "title": "任务清单",
+      "width": 1280,
+      "height": 820,
+      "minWidth": 860,
+      "minHeight": 620
+    }],
+    "security": { "csp": null }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "icon": ["../dist/任务清单.ico"]
+  }
+}
+
