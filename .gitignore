@@ -1,0 +1,17 @@
+# 用户导出的本地任务备份
+dist/*.json
+
+# JavaScript 开发依赖与旧版构建产物
+node_modules/
+release/
+desktop/
+
+# Tauri/Rust 编译缓存与自动生成文件
+src-tauri/target/
+src-tauri/gen/
+
+# 仅供本机或现有网站发布使用的配置/归档
+.codex/
+.openai/
+site-package.tar.gz
+
