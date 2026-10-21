@@ -1,0 +1,12 @@
+[package]
+name = "task-list"
+version = "1.0.0"
+description = "任务清单"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+
