@@ -1,6 +1,6 @@
 [package]
 name = "task-list"
-version = "1.0.1"
+version = "1.0.2"
 description = "任务清单"
 edition = "2021"
 
