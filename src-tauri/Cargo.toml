@@ -1,6 +1,6 @@
 [package]
 name = "task-list"
-version = "1.0.2"
+version = "1.0.3"
 description = "任务清单"
 edition = "2021"
 
@@ -10,4 +10,4 @@ tauri-build = { version = "2", features = [] }
 [dependencies]
 rfd = "0.15"
 tauri = { version = "2", features = [] }
-
+tauri-plugin-single-instance = "2"

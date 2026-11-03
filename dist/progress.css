@@ -1,0 +1,1 @@
+.bar{flex:1;height:5px;overflow:hidden;border:0;border-radius:8px;background:#edf0e8;color:#31664a}.bar::-webkit-progress-bar{background:#edf0e8;border-radius:8px}.bar::-webkit-progress-value{background:#31664a;border-radius:8px}.bar::-moz-progress-bar{background:#31664a;border-radius:8px}

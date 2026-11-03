@@ -1,5 +1,9 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+mod backup;
+
+use tauri::Manager;
+
 #[tauri::command]
 fn save_backup(content: String, default_name: String) -> Result<Option<String>, String> {
   let Some(path) = rfd::FileDialog::new()
@@ -11,14 +15,19 @@ fn save_backup(content: String, default_name: String) -> Result<Option<String>, 
     return Ok(None);
   };
 
-  std::fs::write(&path, content).map_err(|error| format!("无法保存备份：{error}"))?;
+  backup::write_new_backup(&path, &content)?;
   Ok(Some(path.display().to_string()))
 }
 
 fn main() {
   tauri::Builder::default()
+    .plugin(tauri_plugin_single_instance::init(|app, _, _| {
+      if let Some(window) = app.get_webview_window("main") {
+        let _ = window.show();
+        let _ = window.set_focus();
+      }
+    }))
     .invoke_handler(tauri::generate_handler![save_backup])
     .run(tauri::generate_context!())
     .expect("运行任务清单时发生错误");
 }
-

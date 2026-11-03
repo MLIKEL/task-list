@@ -15,3 +15,7 @@ src-tauri/gen/
 .openai/
 site-package.tar.gz
 
+# 本机环境与临时日志
+.env
+.env.*
+*.log

@@ -1,13 +1,14 @@
 {
   "name": "task-list-desktop",
-  "version": "1.0.2",
+  "version": "1.0.3",
+  "type": "module",
   "private": true,
   "description": "任务清单 Windows 桌面版",
   "scripts": {
+    "test": "node --test",
     "tauri:build": "tauri build"
   },
   "devDependencies": {
     "@tauri-apps/cli": "^2.12.3"
   }
 }
-
